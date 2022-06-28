@@ -15,6 +15,7 @@
  * @return {Number} ダメージ
  */
 function effectiveDamage(power, armor, armorPenetration) {
+  let a = 0;
   let effectiveArmor = normalize(armor) - normalize(armorPenetration);
   effectiveArmor = effectiveArmor <= 0 ? 0 : effectiveArmor;
   const damageDecrease = effectiveArmor / (100 + effectiveArmor);
